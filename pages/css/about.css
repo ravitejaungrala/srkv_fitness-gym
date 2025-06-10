@@ -1,0 +1,419 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:#121212;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-logo:hover {
+    border-color: #ffdd57;
+    box-shadow: 0 0 15px rgba(255, 221, 87, 0.6);
+}
+
+.brand-name {
+    font-weight: 700;
+    font-size: 1.5rem;
+    background: linear-gradient(to right, #ff5e62, #f8b500, #00ddeb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 94, 98, 0.5);
+    position: relative;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.brand-name:hover {
+    text-shadow: 0 0 15px rgba(255, 94, 98, 0.8);
+}
+
+.brand-name::after {
+    content: "FITNESS | GYM";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    font-size: 0.7rem;
+    background: linear-gradient(to right, #00ddeb, #5b42f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 100%;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-links a:hover {
+    color: #ffdd57;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffdd57;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.logo-container:hover .brand-name {
+    animation: pulse 1.5s infinite;
+}
+
+
+.main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.about-section {
+    margin: 50px 0;
+}
+
+.about-title, .team-title, .trainer-title, .awards-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0766F7;
+    position: relative;
+}
+
+.about-title::after, .team-title::after, .trainer-title::after, .awards-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #ff5e62, #f8b500);
+}
+
+.about-boxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.about-box {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.box-title {
+    color: #0766F7;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.box-content {
+    color: #555;
+    line-height: 1.7;
+}
+
+
+.team-members, .trainer-members {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.team-member, .trainer-member {
+    width: 250px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover, .trainer-member:hover {
+    transform: translateY(-10px);
+}
+
+.member-img, .trainer-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0766F7;
+    margin: 0 auto 15px;
+    display: block;
+}
+
+.member-name, .trainer-name {
+    font-size: 1.2rem;
+    color: #0766F7;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.member-position, .trainer-position {
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.member-contact, .trainer-contact {
+    color: #333;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+.awards-section {
+    margin: 50px 0;
+}
+
+.award-img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+    display: block;
+}
+
+  .footbar {
+            position: relative;
+            width: 100%;
+            background: black;
+            color: white;
+            padding: 30px 0 15px;
+            margin-top: auto;
+        }
+
+        .foot-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .foot-logo {
+            height: 50px;
+            width: 50px;
+            background-color: rgb(173, 168, 168);
+            border-radius: 50%;
+            padding: 2px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            object-fit: cover;
+        }
+
+        .foot-logo:hover {
+            border-color: #ffdd57;
+            box-shadow: 0 0 15px rgba(255, 221, 87, 0.6);
+        }
+
+        .foot-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .foot-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            font-size: 0.95rem;
+            position: relative;
+        }
+
+        .foot-links a:hover {
+            color: #ffdd57;
+        }
+
+        .foot-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ffdd57;
+            transition: width 0.3s;
+        }
+
+        .foot-links a:hover::after {
+            width: 100%;
+        }
+
+        .footer-social {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-social a {
+            color: white;
+            font-size: 1.2rem;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-social a:hover {
+            color: #ffdd57;
+            transform: translateY(-3px);
+            background-color: rgba(255, 221, 87, 0.2);
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            padding-top: 15px;
+            margin-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .price-section {
+            padding-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .foot-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-brand, .foot-links, .footer-social {
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .foot-links {
+                margin: 15px 0;
+            }
+        }
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .about-box {
+        min-width: 100%;
+    }
+    
+    .team-member, .trainer-member {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+  
+}
