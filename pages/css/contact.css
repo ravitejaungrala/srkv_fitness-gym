@@ -1,4 +1,4 @@
-/* Body and Background Styles */
+
 body {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ body {
   flex-direction: column;
 }
 
-/* Navigation Styles (kept your original with slight enhancements) */
+
 .navbar {
             position: sticky;
             width: 100%;
@@ -140,7 +140,7 @@ body {
         }
 
 
-/* Main Content Styles */
+
 .main {
   text-align: center;
   padding: 40px 20px;
@@ -156,7 +156,7 @@ body {
   gap: 20px;
 }
 
-/* Contact Box Styles */
+
 .contact-box {
   flex: 1;
   min-width: 300px;
@@ -211,7 +211,7 @@ body {
   line-height: 1.6;
 }
 
-/* Map Box Styles */
+
 .map-box {
   flex: 1;
   min-width: 300px;
@@ -258,7 +258,7 @@ body {
   border: none;
 }
 
-/* Form Box Styles */
+
 .form-box {
   flex: 100%;
   background: rgba(255, 255, 255, 0.1);
@@ -355,7 +355,7 @@ button[type="submit"]:hover {
   color: #000;
 }
 
-/* Footer Styles (enhanced while keeping your structure) */
+
 .footbar {
   position: relative;
   width: 100%;
@@ -484,7 +484,7 @@ button[type="submit"]:hover {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
   .content-container {
     flex-direction: column;
@@ -509,6 +509,6 @@ button[type="submit"]:hover {
   }
   
   .nav-links {
-    display: none; /* Consider adding a mobile menu toggle */
+    display: none; 
   }
 }
